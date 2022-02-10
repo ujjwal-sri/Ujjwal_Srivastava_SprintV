@@ -1,0 +1,30 @@
+<div *ngIf="showUserTable">
+    <div>
+        <button class="btn btn-primary" (click)="newUser()">+</button>
+        <span>New User</span>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody *ngFor = 'let user of userData'>
+                <tr>
+                    <th scope="row">{{ user.id }}</th>
+                    <td>{{ user.firstName }}</td>
+                    <td>{{ user.secondName }} </td>
+                    <td>{{ user.email }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div *ngIf="!showUserTable">
+    <app-create-user></app-create-user>
+</div>

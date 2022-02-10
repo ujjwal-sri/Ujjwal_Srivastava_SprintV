@@ -1,0 +1,42 @@
+<div *ngIf="showProjectTable">
+    <div>
+        <button class="btn btn-primary" (click)="newProject()">+</button>
+        <span>New Project</span>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Detail</th>
+                    <th scope="col">Created on</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>TestP1</td>
+                    <td>This is a test project</td>
+                    <td>10/02/21</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>TestP2</td>
+                    <td>This is a test project</td>
+                    <td>10/02/21</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td >TestP3</td>
+                    <td>This is a test project</td>
+                    <td>10/02/21</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div *ngIf="!showProjectTable">
+    <app-create-project></app-create-project>
+</div>

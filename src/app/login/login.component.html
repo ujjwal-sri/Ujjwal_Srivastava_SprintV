@@ -1,0 +1,26 @@
+<div class="mt-4" style="margin-left: 24px;">
+  <h1>Login Screen</h1>
+  <form [formGroup]='loginForm' (ngSubmit)='OnSubmit()'>
+    <div class="container-fluid">
+      <div class="form-group row">
+        <div class="col-3"><label class="col-3" for="exampleInputEmail1">Username</label></div>
+        <div class="col-4" style="user-select: auto;padding-right: 26px;">
+          <input class="form-control form-control-user" type="username" formControlName="username"
+            placeholder="Username" name="username" />
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid pt-2">
+      <div class="row">
+        <div class="form-group row">
+          <div class="col-3"><label for="exampleInputPassword1">Password</label></div>
+          <div class="col-4" style="padding-left: 18px;">
+            <input class="form-control form-control-user" type="password" formControlName="password" type="password"
+              id="exampleInputPassword" placeholder="Password" name="password"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" routerLink="/users">Submit</button>
+  </form>
+</div>

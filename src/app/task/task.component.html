@@ -1,0 +1,50 @@
+<div *ngIf="showTaskTable">
+    <div>
+        <button class="btn btn-primary" (click)="newTask()">+</button>
+        <span>New Task</span>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Project ID</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Assigned to User ID</th>
+                    <th scope="col">Detail</th>
+                    <th scope="col">Created on</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>This is a test task1</td>
+                    <td>10/12/21</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>This is a test task2</td>
+                    <td>10/12/21</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>This is a test task3</td>
+                    <td>10/12/21</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div *ngIf="!showTaskTable">
+    <app-create-task></app-create-task>
+</div>
